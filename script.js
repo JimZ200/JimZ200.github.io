@@ -38,8 +38,9 @@ document.getElementById("submit").addEventListener("click", (event)=>{
             } else if(m.indexOf("@") == -1){ 
                 displayErrorMessage("Enter a valid email");
             } else { 
-                window.alert("Thank you for contacting me"); 
-                window.location.reload();
+                
+                displaySuccessMessage("Thank you for contacting me");
+                reset();
             }
     } else { 
         displayErrorMessage("Please check the box");
@@ -58,6 +59,14 @@ function displaySuccessMessage(message){
     d.innerHTML = message;
 }
 
+function reset(){ 
+    document.getElementById("fname").value = "";
+    document.getElementById("lname").value = "";
+    document.getElementById("check").checked = false; 
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+
+}
 document.getElementById("ComputerSystem").addEventListener("click", (event)=>{ 
     event.preventDefault(); 
     let x = document.getElementById("p1"); 
