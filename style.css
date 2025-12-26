@@ -103,27 +103,31 @@ video{
     text-align: left;
     
 }
-/* @media (max-width: 600px){ 
-    #content{ 
-        width: auto;
-    }
-    nav{ 
-        width: auto;
-        max-width: 100%;
-    }
-    table{ 
-        width: auto;
-    }
-    img{ 
-        max-width:50%; 
-        height: 200px;
-    }
 
-    #github, #linkedin2{ 
-       width:auto;
-        max-height: 100px;
-    }
-} */
+.certificate{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.c{
+    flex: 1 1 300px; /* grow, shrink, min width 300px */
+    max-width: 400px;
+    
+    padding: 15px;
+    border-radius: 10px;
+    
+}
+
+.c img{
+    width: 100%;     /* make image responsive */
+    height: auto;    /* maintain aspect ratio */
+    display: block;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
 
 @media (max-width: 768px){
     /* Adjustments for tablets and small desktop screens */
