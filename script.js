@@ -11,19 +11,19 @@ function setColor(color){
 document.getElementById("darkmode").addEventListener("click", (event)=>{ 
     event.preventDefault(); 
     let x = document.getElementsByTagName("body")[0]; 
-    x.style.backgroundImage = "linear-gradient(to bottom, #000000, #333333)";
+    x.style.backgroundImage = "linear-gradient(to right, #2f3e3a, #3a4a45)";
 
     setColor("white");
 });
 
+document.getElementById("default").addEventListener("click", (event)=>{
+    event.preventDefault();
+    let x = document.getElementsByTagName("body")[0];
+    x.style.backgroundImage = "linear-gradient(to right, #cfe8dc, #e3efd9)";
 
-document.getElementById("lightmode").onclick = function(){ 
-    let x = document.getElementsByTagName("body")[0]; 
-    x.style.backgroundImage = "linear-gradient(to right, #FFC0CB, #E6E6FA)";
     setColor("black");
-}
+ });
 
-    
 
 document.getElementById("submit").addEventListener("click", (event)=>{ 
     event.preventDefault();
