@@ -2,19 +2,17 @@ name: Deploy Website
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
 
 jobs:
-  deploy:
+  build: 
     runs-on: ubuntu-latest
-
     steps:
-      -uses: actions/checkout@v4
-      -name: Check HTML file exists
-        run: Is *.HTML
-
-       -name: Check CSS file exists
-         run: Is *.CSS
-
-        -name: Check JS file exists
-          run: Is *.JS
+      - uses: actions/checkout@v2
+        with:
+          node-version: 12
+      -run: nmp ci
+      -run: nmp test
+      -run: nmp run build 
+      -run: nmp run deploy
