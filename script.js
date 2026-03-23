@@ -75,3 +75,5 @@ document.getElementById("ComputerSystem").addEventListener("click", (event)=>{
     let y = document.getElementById("imgCS"); 
     y.src = "Media/1120.png";
 });
+
+//comment here, to test if the pipeline will run after push 
