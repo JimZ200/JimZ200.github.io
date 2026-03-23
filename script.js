@@ -76,4 +76,4 @@ document.getElementById("ComputerSystem").addEventListener("click", (event)=>{
     y.src = "Media/1120.png";
 });
 
-//comment here, to test if the pipeline will run after push 
+//comment here, to test if the pipeline will run after push!
