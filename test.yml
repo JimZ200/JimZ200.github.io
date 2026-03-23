@@ -4,26 +4,17 @@ on:
   push:
     branches: ["main"]
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      -uses: actions/checkout@v4
+      -name: Check HTML file exists
+        run: Is *.HTML
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+       -name: Check CSS file exists
+         run: Is *.CSS
 
-      - name: Upload site
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+        -name: Check JS file exists
+          run: Is *.JS
